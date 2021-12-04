@@ -84,13 +84,15 @@ function magic($var, $k) //Оформляем это функцией magic()
 $input = array('qweasdqweas', 'q', 'rteww', 'ewqqqqq'); //Входящий массив
 $orig = $input; //Пришлось повторить чтобы не влияла сортировка ниже
 array_multisort(array_map('strlen', $input), $input); //сотируем массив и сопоставляем по длинне
+$end = end($input); // Получаем последнее end самое длинное слово
+$size = iconv_strlen($end); //Получаем число символов
 echo ('<p class="center line">');
-echo ('Самое длинное слово: ' . $end = end($input)); // Получаем последнее end самое длинное слово
-echo ('<br>Число символов:' . iconv_strlen($end)); //Для проверки
+echo ('Самое длинное слово: ' .  $end ); 
+echo ('<br>Число символов:' . $size ); //Для проверки
 
 //Перебираем в цикле 
     foreach ($orig as $in) {
-        $result = str_pad($in,  11, "_"); //Допишем 11 или сколько-то знаков _
+        $result = str_pad($in,  $size, "_"); //Допишем 11 или сколько-то знаков _
         $arr[] = $result; // в общий массив записывается добавленые
     }
     echo ('<br>Получаем: <span class="green">');
@@ -102,8 +104,10 @@ function all_eq($input) //Оформляем это функцией all_eq(lst)
     {
         $orig = $input;
         array_multisort(array_map('strlen', $input), $input); //сотируем массив и сопоставляем по длинне
+        $end = end($input); // Получаем последнее end самое длинное слово
+        $size = iconv_strlen($end); //Получаем число символов
         foreach ($orig as $in) {
-            $result = str_pad($in,  11, "_"); //Допишем 11 или сколько-то знаков _
+            $result = str_pad($in,  $size, "_"); //Допишем 11 или сколько-то знаков _
             $arr[] = $result; // в общий массив записывается добавленые
         }
         echo ('***');
@@ -111,7 +115,7 @@ function all_eq($input) //Оформляем это функцией all_eq(lst)
         echo ('***');
     }
 
-    all_eq(array('qweasdqweas', 'q', 'rteww', 'ewqqqqq')); //Пример использования вызвали и передали массив на вход
+    all_eq(array('a', 'aa', 'aaa', 'aaaa', 'aaaaa')); //Пример использования вызвали и передали массив на вход
 
 ?>
 
