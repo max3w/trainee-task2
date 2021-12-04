@@ -5,9 +5,43 @@ Algorithmic tasks
 ## Как запускать?
 
 <ol>
-<li>Посетить тестовую страничку по адресу <a href="https://max3w.pp.ua/trainee-task2/">https://max3w.pp.ua/trainee-task2/</a></li>
+<li>Посетить тестовую страничку по адресу <a href="https://max3w.pp.ua/trainee-task2/" target="_blank">https://max3w.pp.ua/trainee-task2/</a></li>
 <li>Запустить на localhost файл index.php</li>
 <li>В консоли запускается командой: >php index.php (В моем сервере это php /var/www/max3w.pp.ua/trainee-task2/index.php)</li>
+</ol>
+
+## Отдельный запуск 3 функций с параметрами выполняется командами:
+
+<ol>
+<li><pre>php -r "require '/var/www/max3w.pp.ua/trainee-task2/index.php'; magic(array(2, 5, 7), 2);"</pre>Получим ответ: <pre>***<span class="green">Волшебство случается</span>***</pre></li>
+<li><pre>php -r "require '/var/www/max3w.pp.ua/trainee-task2/index.php'; all_eq(array('qweasdqweas', 'q', 'rteww', 'ewqqqqq'));"</pre> Получим ответ <pre>***Array
+(
+    [0] => qweasdqweas
+    [1] => q__________
+    [2] => rteww______
+    [3] => ewqqqqq____
+)
+***</pre></li>
+<li><pre>php -r "require '/var/www/max3w.pp.ua/trainee-task2/index.php'; set_gen(array(1, 1, 3, 3, 1));"</pre> Получим такой себе ответ: <pre>***Array
+(
+    [0] =>
+    [1] => 1
+    [2] => 11
+    [3] => 111
+    [4] =>
+    [5] => 3
+    [6] => 33
+)
+***</pre>
+Добавим функцию очистки пустых ключей, получим: <pre>***Array
+(
+    [1] => 1
+    [2] => 11
+    [3] => 111
+    [5] => 3
+    [6] => 33
+)
+***</pre></li>
 </ol>
 
 ## Задачка 1

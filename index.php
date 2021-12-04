@@ -164,9 +164,9 @@ function set_gen($array) //Оформляем это функцией set_gen()
         for ($value; $n <= $value; $n++) {
             $allresult[] = str_repeat($key, $n); //Повторяем просто число n раз и пишем это дело в новый массив
           } 
-}   
+}   $new_allresult = array_diff($allresult, array('', NULL, false)); //Удаляем ключи без значений
     echo ('***');
-    print_r ($allresult);
+    print_r ($new_allresult);
     echo ('***');
 }
     set_gen(array(1, 1, 3, 3, 1)); //Пример использования вызвали и передали массив на вход
