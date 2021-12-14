@@ -5,7 +5,7 @@ Algorithmic tasks
 ## Как запускать?
 
 <ol>
-<li>Посетить тестовую страничку по адресу <a href="https://max3w.pp.ua/trainee-task2/" target="_blank">https://max3w.pp.ua/trainee-task2/</a></li>
+<li>Посетить тестовую страничку по адресу <a href="https://max3w.pp.ua/trainee-task2/index.php" target="_blank">https://max3w.pp.ua/trainee-task2/</a></li>
 <li>Запустить на localhost файл index.php</li>
 <li>В консоли запускается командой: >php index.php (В моем сервере это php /var/www/max3w.pp.ua/trainee-task2/index.php)</li>
 </ol>
